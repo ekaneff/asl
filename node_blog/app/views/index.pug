@@ -1,0 +1,47 @@
+head
+	title Emily's Node Blog
+body
+	style
+		include ./../../public/css/bootstrap.min.css
+		include ./../../public/css/main.css
+	h1#heading Emily's Node Blog
+	
+	if errors
+		ul.errors.list-group
+			each val,index in errors
+				li.list-group-item.list-group-item-danger=errors[index].msg
+	form.form-horizontal(
+		action='/'
+		method='POST'
+	)
+		p
+			label.control-label Title: 
+			div.col-sm-10
+			input.form-control(type='text' name='title') 
+		p
+			label.control-label Date: 
+			div.col-sm-10
+			input.form-control(type='text' name='date') 
+		p
+			label.control-label Author: 
+			div.col-sm-10
+			input.form-control(type='text' name='author') 
+		p
+			label.control-label Summary: 
+			div.col-sm-10
+			input.form-control(type='text' name='summary') 
+		p
+			label.control-label Post: 
+			div.col-sm-10
+			textarea.form-control(name='full_post', rows='10') 
+		button.btn.btn-primary(type='submit' id='submit') Submit
+	section
+		h2 Previous Posts
+		each val, index in posts
+			div
+				h3
+					a.prev(href="/post/" + posts[index].title)= posts[index].title
+				p= posts[index].summary
+
+	
+

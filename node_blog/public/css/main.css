@@ -1,0 +1,17 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}

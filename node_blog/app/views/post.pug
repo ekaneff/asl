@@ -1,0 +1,11 @@
+head
+	title Emily's Node Blog
+body
+	style
+		include ./../../public/css/bootstrap.min.css
+		include ./../../public/css/main.css
+	h1 Individual Post
+	h2=data.title
+	h3=data.author
+	h4=data.date
+	p=data.full_post

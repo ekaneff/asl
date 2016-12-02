@@ -1,0 +1,17 @@
+{
+  "name": "node_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emily Kaneff",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-validator": "^3.0.0",
+    "glob": "^7.1.1"
+  }
+}
