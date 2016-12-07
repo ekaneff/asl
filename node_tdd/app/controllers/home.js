@@ -40,7 +40,6 @@ router.get('/item/:id', function(req,res,next) {
 
 router.post('/lists', function(req,res,next) {
 	res.json(req.body.id);
-	//console.log(req.body);
 });
 
 router.post('/item', function(req,res,next) {
@@ -55,13 +54,11 @@ router.put('/item/:id', function(req,res, next) {
 		notes: ['buy crickets'],
 		status: 'incomplete'
 	});
-
-	res.body = req.body;
-
 });
 
 router.delete('/item/:id', function(req, res, next) {
 	delete req.body;
 	res.sendStatus(200);
+	//I'm pretty sure this isnt doing anything, but I can't figure out what else to do
 });
 
