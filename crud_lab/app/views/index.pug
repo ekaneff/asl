@@ -1,0 +1,16 @@
+h1 To-Do's
+
+form(action="/" method="POST")
+	p
+		label Name: 
+			input(type="text" name='name')
+	p
+		label Color: 
+			input(type="text" name='color')
+	button(type='submit') Create list
+
+h2 My Lists
+
+each list in lists
+	h3
+		a(href="/list/" + list.name)= list.name

@@ -1,0 +1,13 @@
+form(method="POST" action="/update" )
+	h2 Edit List Item
+	input(type="hidden" name='old_name' value=item.title )
+	p
+		label Title: 
+			input(type="text" name='title' value=item.title)
+	p
+		label Notes: 
+			input(type="text" name='notes' value=item.notes)
+	p
+		label Status: 
+			input(type="text" name='status' value=item.status)
+	button(type='submit') Save

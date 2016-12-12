@@ -1,0 +1,24 @@
+a(href="/") Back to home
+
+h1= list[0].name
+
+form(method="POST" action="/item" )
+	h2 New Item
+	input(type="hidden" name='list_name' value=list[0].name )
+	p
+		label Title: 
+			input(type="text" name='title')
+	p
+		label Notes: 
+			input(type="text" name='notes')
+	p
+		label Status: 
+			input(type="text" name='status' placeholder="complete or incomplete")
+	button(type='submit') Add item
+
+h2 Items
+
+each item in items
+	h3
+		a(href="/item/" + item.title)= item.title
+		p=item.status
