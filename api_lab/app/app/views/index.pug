@@ -1,0 +1,14 @@
+h1 Lists
+
+form(action="/" method="POST")
+	p
+		label Name: 
+			input(type="text" name='title')
+	p
+		label Color: 
+			input(type="text" name='color')
+	button(type='submit') Create list
+
+each list in lists
+	a(href="/lists/" + list.id)= list.title
+	br

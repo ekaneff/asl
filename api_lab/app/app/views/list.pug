@@ -1,0 +1,28 @@
+a(href="/") Back to home
+
+h1= list.title
+
+form(action="/items" method="POST")
+	input(type="hidden" name="list_id" value=list.id )
+	p
+		label title: 
+			input(type="text" name='title')
+	p
+		label Content: 
+			input(type="text" name='content')
+	p
+		label Status: 
+			input(type="text" name='status')
+	button(type='submit') Create item
+
+h2 Items
+
+each item in list.items
+	a(href="/items/" + item.id)= item.title
+	p=item.status
+	a(href="/items/" + item.id + "/destroy") Delete | 
+	a(href="/items/" + item.id + "/edit") Edit
+
+
+
+

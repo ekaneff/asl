@@ -16,8 +16,6 @@ module.exports = function(app) {
 	});
 }
 
-
-
 var postDataPath = path.join(__dirname, '/../data/posts.json');
 
 function savePosts(posts) {
