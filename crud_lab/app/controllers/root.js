@@ -98,6 +98,7 @@ router.get('/edit/:title', function(req, res, next) {
 	});
 });
 
+//update items
 router.post('/update', function(req, res, next) {
 	Item.update({title: req.body.old_name}, {$set: {old_name: req.body.title, title: req.body.title, notes: req.body.notes, status: req.body.status}}, function (err, item) {
 		res.redirect('/');

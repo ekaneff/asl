@@ -1,0 +1,15 @@
+form(action="/update" method="POST")
+	input(type="hidden" name="old_name" value=contact.name)
+	p
+		label Name: 
+			input(type="text" name='name' value=contact.name)
+	p
+		label Phone Number: 
+			input(type="text" name='phone' value=contact.phone_number)
+	p
+		label Email: 
+			input(type="email" name='email' value=contact.email)
+	p
+		label Date of Birth: 
+			input(type="date" name='dob' value=dob)
+	button(type='submit') Save

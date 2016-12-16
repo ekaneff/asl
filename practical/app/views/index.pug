@@ -1,0 +1,19 @@
+h1 Emily's Contact Book
+
+if user
+	p Welcome, user.username
+
+else
+
+	a(href="/auth/github") Log In with Github
+
+p
+	a(href="/add") Add new contact
+
+h2 My Contacts
+
+each contact in contacts 
+	h3
+		a(href="/contact/" + contact.name)= contact.name
+	a(href="/delete/" + contact.name) Delete | 
+	a(href="/edit/" + contact.name) Edit
