@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +25,8 @@
     "passport-github2": "^0.1.10",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta6",
-    "supertest": "^2.0.1"
-  }
+    "supertest": "^2.0.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
