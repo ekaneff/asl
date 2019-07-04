@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Emily Kaneff",
   "license": "ISC",
@@ -12,6 +14,8 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-validator": "^3.0.0",
-    "glob": "^7.1.1"
-  }
+    "glob": "^7.1.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
